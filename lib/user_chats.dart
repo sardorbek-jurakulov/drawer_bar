@@ -1,5 +1,4 @@
 import "package:flutter/material.dart";
-import "dart.io";
 
 class UserChatPage extends StatefulWidget {
   const UserChatPage({Key? key}) : super(key: key);
@@ -19,24 +18,37 @@ class _UserChatPageState extends State<UserChatPage> {
         ),
         drawer: Drawer(
           child: ListView(
-            children: DrawerHeader(
-              decoration: BoxDecoration(
-                backgroundColor: Colors.blue,
+            children: [
+              DrawerHeader(
+                decoration: const BoxDecoration(
+                  color: Colors.blue,
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      children: const [
+                        CircleAvatar(
+                          radius: 50,
+                          backgroundImage:
+                              AssetImage("assets/images/first_avatar.jpeg"),
+                        ),
+                        Icon(Icons.sunny),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Column(
+                          children: const [
+                            Text("Sardorbek Jo'raqulov"),
+                            Text("+998 946110464"),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      CircleAvatar(
-                        backgroundImage: Image.asset(""),
-                      ),
-                      Icon(Icons.sunny),
-                    ],
-                  ),
-                  Row(),
-                ],
-              ),
-            ),
+            ],
           ),
         ),
       ),
