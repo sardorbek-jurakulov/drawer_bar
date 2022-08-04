@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "dart.io";
 
 class UserChatPage extends StatefulWidget {
   const UserChatPage({Key? key}) : super(key: key);
@@ -13,7 +14,31 @@ class _UserChatPageState extends State<UserChatPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(),
-        body: Text("Drawer create task"),
+        body: const Center(
+          child: Text("Drawer create task"),
+        ),
+        drawer: Drawer(
+          child: ListView(
+            children: DrawerHeader(
+              decoration: BoxDecoration(
+                backgroundColor: Colors.blue,
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundImage: Image.asset(""),
+                      ),
+                      Icon(Icons.sunny),
+                    ],
+                  ),
+                  Row(),
+                ],
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
