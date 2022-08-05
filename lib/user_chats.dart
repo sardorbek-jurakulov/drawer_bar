@@ -12,19 +12,26 @@ class UserChatPage extends StatefulWidget {
 
 class _UserChatPageState extends State<UserChatPage> {
   List<DrawerBarSection> drawerBarSections = [
-    DrawerBarSection("new group"),
-    DrawerBarSection("contacts"),
-    DrawerBarSection("calls"),
-    DrawerBarSection("people nearby"),
-    DrawerBarSection("saved messages"),
-    DrawerBarSection("settings"),
-    DrawerBarSection("invite friends"),
-    DrawerBarSection("telegram features"),
+    DrawerBarSection("New Group"),
+    DrawerBarSection("Contacts"),
+    DrawerBarSection("Calls"),
+    DrawerBarSection("People Nearby"),
+    DrawerBarSection("Saved Messages"),
+    DrawerBarSection("Settings"),
+    DrawerBarSection("Invite Friends"),
+    DrawerBarSection("Telegram Features"),
   ];
   @override
   Widget build(BuildContext context) {
     Widget drawerBarSectionsCreater(sectionName) {
-      return ListTile();
+      return ListTile(
+        title: Text(
+          sectionName,
+          style: const TextStyle(
+            color: Colors.black,
+          ),
+        ),
+      );
     }
 
     return SafeArea(
@@ -118,11 +125,16 @@ class _UserChatPageState extends State<UserChatPage> {
                   ),
                 ),
               ),
-              ListView.builder(
+              Container(
+                height: double.maxFinite,
+                child: ListView.builder(
                   itemCount: drawerBarSections.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return drawerBarSectionsCreater(drawerBarSections[index]);
-                  }),
+                    return drawerBarSectionsCreater(
+                        drawerBarSections[index].sectionName);
+                  },
+                ),
+              ),
             ],
           ),
         ),
