@@ -21,14 +21,17 @@ class _UserChatPageState extends State<UserChatPage> {
     DrawerBarSection("Invite Friends"),
     DrawerBarSection("Telegram Features"),
   ];
+
   @override
   Widget build(BuildContext context) {
+    int lengthOfDrawerBarSections = (drawerBarSections.length);
     Widget drawerBarSectionsCreater(sectionName) {
       return ListTile(
         title: Text(
           sectionName,
           style: const TextStyle(
             color: Colors.black,
+            fontWeight: FontWeight.w700,
           ),
         ),
       );
@@ -125,10 +128,10 @@ class _UserChatPageState extends State<UserChatPage> {
                   ),
                 ),
               ),
-              Container(
+              SizedBox(
                 height: double.maxFinite,
                 child: ListView.builder(
-                  itemCount: drawerBarSections.length,
+                  itemCount: lengthOfDrawerBarSections,
                   itemBuilder: (BuildContext context, int index) {
                     return drawerBarSectionsCreater(
                         drawerBarSections[index].sectionName);
