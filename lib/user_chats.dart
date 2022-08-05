@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'dart:math' as math;
+import "package:telegram_drawer_bar/models/drawer_bar_section_model.dart";
 
 class UserChatPage extends StatefulWidget {
   const UserChatPage({Key? key}) : super(key: key);
@@ -10,8 +11,22 @@ class UserChatPage extends StatefulWidget {
 }
 
 class _UserChatPageState extends State<UserChatPage> {
+  List<DrawerBarSection> drawerBarSections = [
+    DrawerBarSection("new group"),
+    DrawerBarSection("contacts"),
+    DrawerBarSection("calls"),
+    DrawerBarSection("people nearby"),
+    DrawerBarSection("saved messages"),
+    DrawerBarSection("settings"),
+    DrawerBarSection("invite friends"),
+    DrawerBarSection("telegram features"),
+  ];
   @override
   Widget build(BuildContext context) {
+    Widget drawerBarSectionsCreater(sectionName) {
+      return ListTile();
+    }
+
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(),
@@ -103,6 +118,11 @@ class _UserChatPageState extends State<UserChatPage> {
                   ),
                 ),
               ),
+              ListView.builder(
+                  itemCount: drawerBarSections.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return drawerBarSectionsCreater(drawerBarSections[index]);
+                  }),
             ],
           ),
         ),
