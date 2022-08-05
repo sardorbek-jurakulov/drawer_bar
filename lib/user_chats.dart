@@ -27,11 +27,13 @@ class _UserChatPageState extends State<UserChatPage> {
     int lengthOfDrawerBarSections = (drawerBarSections.length);
     Widget drawerBarSectionsCreater(sectionName) {
       return ListTile(
+        leading: Icon(Icons.add),
         title: Text(
           sectionName,
           style: const TextStyle(
             color: Colors.black,
-            fontWeight: FontWeight.w700,
+            fontWeight: FontWeight.w500,
+            fontSize: 15,
           ),
         ),
       );
