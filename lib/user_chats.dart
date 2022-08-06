@@ -130,17 +130,131 @@ class _UserChatPageState extends State<UserChatPage> {
                   ),
                 ),
               ),
-              SizedBox(
-                height: double.maxFinite,
-                child: ListView.builder(
-                  itemCount: lengthOfDrawerBarSections,
-                  itemBuilder: (BuildContext context, int index) {
-                    return drawerBarSectionsCreater(
-                        drawerBarSections[index].sectionName,
-                        drawerBarSections[index].sectionLeadIcon);
-                  },
-                ),
-              ),
+              // SizedBox(
+              //   height: double.maxFinite,
+              //   child: ListView.builder(
+              //     itemCount: lengthOfDrawerBarSections,
+              //     itemBuilder: (BuildContext context, int index) {
+              //       return drawerBarSectionsCreater(
+              //           drawerBarSections[index].sectionName,
+              //           drawerBarSections[index].sectionLeadIcon);
+              //     },
+              //   ),
+              // ),
+              Container(
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
+                child: Column(children: const [
+                  ListTile(
+                    leading: Icon(Icons.group_rounded, color: Colors.black),
+                    title: Text(
+                      "New Group",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                      ),
+                    ),
+                    // horizontalTitleGap: 0,
+                    minLeadingWidth: 0,
+                    minVerticalPadding: 0,
+                    contentPadding: EdgeInsets.zero,
+                    visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                    dense: true,
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.person,
+                      color: Colors.black,
+                    ),
+                    title: Text(
+                      "Contacts",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                      ),
+                    ),
+                    // horizontalTitleGap: 0,
+                    minLeadingWidth: 0,
+                    minVerticalPadding: 0,
+                    contentPadding: EdgeInsets.zero,
+                    visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                    dense: true,
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.add),
+                    title: Text(
+                      "Calls",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                      ),
+                    ),
+                    horizontalTitleGap: 0,
+                    minLeadingWidth: 0,
+                    minVerticalPadding: 0,
+                    contentPadding: EdgeInsets.zero,
+                    visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                    dense: true,
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.add),
+                    title: Text(
+                      "People Nearby",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.add),
+                    title: Text(
+                      "Saved Messages",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.add),
+                    title: Text(
+                      "Settings",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.add),
+                    title: Text(
+                      "Invite Friends",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.add),
+                    title: Text(
+                      "Telegram Features",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                ]),
+              )
             ],
           ),
         ),
