@@ -145,7 +145,7 @@ class _UserChatPageState extends State<UserChatPage> {
                 padding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
                 child: Column(children: const [
                   ListTile(
-                    leading: Icon(Icons.group_rounded, color: Colors.black),
+                    leading: Icon(Icons.people_outline, color: Colors.black),
                     title: Text(
                       "New Group",
                       style: TextStyle(
@@ -163,7 +163,7 @@ class _UserChatPageState extends State<UserChatPage> {
                   ),
                   ListTile(
                     leading: Icon(
-                      Icons.person,
+                      Icons.person_outline,
                       color: Colors.black,
                     ),
                     title: Text(
