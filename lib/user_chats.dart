@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'dart:math' as math;
 import "package:telegram_drawer_bar/models/drawer_bar_section_model.dart";
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class UserChatPage extends StatefulWidget {
   const UserChatPage({Key? key}) : super(key: key);
@@ -145,7 +146,10 @@ class _UserChatPageState extends State<UserChatPage> {
                 padding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
                 child: Column(children: const [
                   ListTile(
-                    leading: Icon(Icons.people_outline, color: Colors.black),
+                    leading: Icon(
+                      Icons.people_outline,
+                      color: Colors.black,
+                    ),
                     title: Text(
                       "New Group",
                       style: TextStyle(
@@ -202,7 +206,10 @@ class _UserChatPageState extends State<UserChatPage> {
                     dense: true,
                   ),
                   ListTile(
-                    leading: Icon(Icons.add),
+                    leading: FaIcon(
+                      FontAwesomeIcons.streetView,
+                      color: Colors.black,
+                    ),
                     title: Text(
                       "People Nearby",
                       style: TextStyle(
