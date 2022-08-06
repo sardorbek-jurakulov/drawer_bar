@@ -2,7 +2,7 @@ import "package:flutter/material.dart";
 
 class DrawerBarSection {
   String sectionName;
-  Icon iconName;
+  Icon sectionLeadIcon;
 
-  DrawerBarSection(this.sectionName, this.iconName);
+  DrawerBarSection(this.sectionName, this.sectionLeadIcon);
 }

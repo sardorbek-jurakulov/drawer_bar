@@ -12,22 +12,22 @@ class UserChatPage extends StatefulWidget {
 
 class _UserChatPageState extends State<UserChatPage> {
   List<DrawerBarSection> drawerBarSections = [
-    DrawerBarSection("New Group"),
-    DrawerBarSection("Contacts"),
-    DrawerBarSection("Calls"),
-    DrawerBarSection("People Nearby"),
-    DrawerBarSection("Saved Messages"),
-    DrawerBarSection("Settings"),
-    DrawerBarSection("Invite Friends"),
-    DrawerBarSection("Telegram Features"),
+    DrawerBarSection("New Group", const Icon(Icons.add)),
+    DrawerBarSection("Contacts", const Icon(Icons.add)),
+    DrawerBarSection("Calls", const Icon(Icons.add)),
+    DrawerBarSection("People Nearby", const Icon(Icons.add)),
+    DrawerBarSection("Saved Messages", const Icon(Icons.add)),
+    DrawerBarSection("Settings", const Icon(Icons.add)),
+    DrawerBarSection("Invite Friends", const Icon(Icons.add)),
+    DrawerBarSection("Telegram Features", const Icon(Icons.add)),
   ];
 
   @override
   Widget build(BuildContext context) {
     int lengthOfDrawerBarSections = (drawerBarSections.length);
-    Widget drawerBarSectionsCreater(sectionName) {
+    Widget drawerBarSectionsCreater(String sectionName, Icon sectionLeadIcon) {
       return ListTile(
-        leading: Icon(Icons.add),
+        leading: sectionLeadIcon,
         title: Text(
           sectionName,
           style: const TextStyle(
@@ -136,7 +136,8 @@ class _UserChatPageState extends State<UserChatPage> {
                   itemCount: lengthOfDrawerBarSections,
                   itemBuilder: (BuildContext context, int index) {
                     return drawerBarSectionsCreater(
-                        drawerBarSections[index].sectionName);
+                        drawerBarSections[index].sectionName,
+                        drawerBarSections[index].sectionLeadIcon);
                   },
                 ),
               ),
