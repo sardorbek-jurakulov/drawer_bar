@@ -165,6 +165,7 @@ class _UserChatPageState extends State<UserChatPage> {
                     visualDensity: VisualDensity(horizontal: 0, vertical: -4),
                     dense: true,
                   ),
+                  SizedBox(height: 15),
                   ListTile(
                     leading: Icon(
                       Icons.person_outline,
@@ -185,6 +186,7 @@ class _UserChatPageState extends State<UserChatPage> {
                     visualDensity: VisualDensity(horizontal: 0, vertical: -4),
                     dense: true,
                   ),
+                  SizedBox(height: 15),
                   ListTile(
                     leading: Icon(
                       Icons.local_phone_outlined,
@@ -205,6 +207,7 @@ class _UserChatPageState extends State<UserChatPage> {
                     visualDensity: VisualDensity(horizontal: 0, vertical: -4),
                     dense: true,
                   ),
+                  SizedBox(height: 15),
                   ListTile(
                     leading: FaIcon(
                       FontAwesomeIcons.streetView,
@@ -225,6 +228,7 @@ class _UserChatPageState extends State<UserChatPage> {
                     visualDensity: VisualDensity(horizontal: 0, vertical: -4),
                     dense: true,
                   ),
+                  SizedBox(height: 15),
                   ListTile(
                     leading: Icon(
                       Icons.bookmark_border_rounded,
@@ -245,6 +249,7 @@ class _UserChatPageState extends State<UserChatPage> {
                     visualDensity: VisualDensity(horizontal: 0, vertical: -4),
                     dense: true,
                   ),
+                  SizedBox(height: 15),
                   ListTile(
                     leading: Icon(
                       Icons.settings_outlined,
@@ -265,6 +270,7 @@ class _UserChatPageState extends State<UserChatPage> {
                     visualDensity: VisualDensity(horizontal: 0, vertical: -4),
                     dense: true,
                   ),
+                  SizedBox(height: 15),
                   ListTile(
                     leading: Icon(
                       Icons.person_add_outlined,
@@ -285,6 +291,7 @@ class _UserChatPageState extends State<UserChatPage> {
                     visualDensity: VisualDensity(horizontal: 0, vertical: -4),
                     dense: true,
                   ),
+                  SizedBox(height: 15),
                   ListTile(
                     leading: Icon(
                       CupertinoIcons.question_circle,
