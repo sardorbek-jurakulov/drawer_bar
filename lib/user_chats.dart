@@ -226,7 +226,10 @@ class _UserChatPageState extends State<UserChatPage> {
                     dense: true,
                   ),
                   ListTile(
-                    leading: Icon(Icons.add),
+                    leading: Icon(
+                      Icons.bookmark_border_rounded,
+                      color: Colors.black,
+                    ),
                     title: Text(
                       "Saved Messages",
                       style: TextStyle(
@@ -243,7 +246,10 @@ class _UserChatPageState extends State<UserChatPage> {
                     dense: true,
                   ),
                   ListTile(
-                    leading: Icon(Icons.add),
+                    leading: Icon(
+                      Icons.settings_outlined,
+                      color: Colors.black,
+                    ),
                     title: Text(
                       "Settings",
                       style: TextStyle(
@@ -260,7 +266,10 @@ class _UserChatPageState extends State<UserChatPage> {
                     dense: true,
                   ),
                   ListTile(
-                    leading: Icon(Icons.add),
+                    leading: Icon(
+                      Icons.person_add_outlined,
+                      color: Colors.black,
+                    ),
                     title: Text(
                       "Invite Friends",
                       style: TextStyle(
@@ -277,7 +286,10 @@ class _UserChatPageState extends State<UserChatPage> {
                     dense: true,
                   ),
                   ListTile(
-                    leading: Icon(Icons.add),
+                    leading: Icon(
+                      CupertinoIcons.question_circle,
+                      color: Colors.black,
+                    ),
                     title: Text(
                       "Telegram Features",
                       style: TextStyle(
