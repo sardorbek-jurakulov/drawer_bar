@@ -182,7 +182,10 @@ class _UserChatPageState extends State<UserChatPage> {
                     dense: true,
                   ),
                   ListTile(
-                    leading: Icon(Icons.add),
+                    leading: Icon(
+                      Icons.local_phone_outlined,
+                      color: Colors.black,
+                    ),
                     title: Text(
                       "Calls",
                       style: TextStyle(
@@ -191,7 +194,7 @@ class _UserChatPageState extends State<UserChatPage> {
                         fontSize: 15,
                       ),
                     ),
-                    horizontalTitleGap: 0,
+                    // horizontalTitleGap: 0,
                     minLeadingWidth: 0,
                     minVerticalPadding: 0,
                     contentPadding: EdgeInsets.zero,
